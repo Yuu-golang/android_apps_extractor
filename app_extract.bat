@@ -1,6 +1,6 @@
 @echo off
 
-cd c:\android-backup-extractor
+cd C:\android-backup-extractor
 
 rem パッケージ指定
 :input_check
@@ -38,14 +38,14 @@ goto :no_ok2
 
 echo 二次展開中
 
-mkdir %USERPROFILE%\Documents\extracted_apps\%pacname%
-cd %USERPROFILE%\Documents\extracted_apps\%pacname%
+mkdir %pacname%
+cd %pacname%
 
 rem 7zipで展開
-"C:\Program Files\7-Zip\7z.exe" x -y -o%USERPROFILE%\Documents\extracted_apps C:\android-backup-extractor\extracted_data.tar
+"C:\Program Files\7-Zip\7z.exe" x -y -oC:\android_backup_extractor\extracted_apps\%pacname% C:\android-backup-extractor\extracted_data.tar
 
 del C:\android-backup-extractor\extracted_data.tar
 del C:\android-backup-extractor\backup.ab
 
 rem explorerを開く
-explorer %USERPROFILE%\Documents\extracted_apps\%pacname%
+explorer C:\android_backup_extractor\extracted_apps\%pacname%
