@@ -1,5 +1,5 @@
 # android_apps_extracter
-
+this can extract app's data and unzip it
 ## Usage
 1. make dir whitch is c:\android_backup_extractor
 2. setup abp.jar in c:\android_backup_extractor
